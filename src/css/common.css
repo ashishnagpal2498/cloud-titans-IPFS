@@ -1,4 +1,9 @@
 /*Loader */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .loader {
     top: 50%;
     position: absolute;
@@ -18,4 +23,20 @@
     100% {
         transform: rotate(360deg);
     }
+}
+.fx-b50{
+    flex-basis: 50%;
+    max-width: 50%;
+}
+.fx-b100 {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+.mt-5{
+    margin-top: 5px;
+}
+.dFlexRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

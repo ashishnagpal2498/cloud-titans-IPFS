@@ -1,4 +1,4 @@
-.container{
+.main-container{
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -7,17 +7,18 @@
     display: flex;
 }
 .side-nav{
-    flex: 1 1 30%;
+    flex: 1 1 20%;
     display: flex;
     flex-wrap: wrap;
+    background-color: #66FF99;
 }
 .user-avatar-wrapper {
     flex-basis: 100%;
     padding: 20px;
 }
 .user-avatar{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 100px;
     border: 1px solid black;
 }
@@ -39,5 +40,5 @@
 
 }
 .main-content{
-    flex: 1 1 70%;
+    flex: 1 1 80%;
 }
