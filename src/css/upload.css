@@ -1,0 +1,50 @@
+.upload-container {
+    padding: 20px;
+}
+.heading {
+    font-size: 25px;
+
+}
+.dropZone-outer {
+    width: 80%;
+    margin: 30px auto;
+}
+.upload-button {
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+}
+.option{
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 15px 0;
+    text-align: center;
+}
+.dropZone {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 2px dashed #eeeeee;
+    border-radius: 10px;
+    background-color: #fafafa;
+    color: #bdbdbd;
+    outline: none;
+    transition: border .24s ease-in-out;
+}
+.isActive {
+    border-color: #2196f3;
+}
+.isAccept {
+    border-color: #00e676;
+}
+isReject {
+    border-color: #ff1744;
+}
