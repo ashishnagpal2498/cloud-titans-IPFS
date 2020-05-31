@@ -7,13 +7,11 @@
     display: flex;
 }
 .side-nav{
-    flex: 1 1 20%;
-    display: flex;
-    flex-wrap: wrap;
+    flex: 1 1 15%;
     background-color: #66FF99;
 }
 .user-avatar-wrapper {
-    flex-basis: 100%;
+    min-height: 100px;
     padding: 20px;
 }
 .user-avatar{
@@ -27,6 +25,7 @@
     height: 100%;
     object-fit: contain;
     object-position: center;
+    border-radius: 100px;
 }
 .navigation {
     list-style-type: none;
@@ -37,8 +36,11 @@
 .navigation li  {
     padding: 20px;
     font-size: 18px;
-
+}
+.navigation li a {
+    text-decoration: none;
+    color: black;
 }
 .main-content{
-    flex: 1 1 80%;
+    flex: 1 1 85%;
 }

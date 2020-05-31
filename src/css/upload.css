@@ -3,7 +3,6 @@
 }
 .heading {
     font-size: 25px;
-
 }
 .dropZone-outer {
     width: 80%;
@@ -18,6 +17,7 @@
     border-radius: 5px;
     margin: 10px auto;
     display: block;
+    cursor: pointer;
 }
 .option{
     font-size: 22px;
@@ -31,13 +31,49 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding: 100px;
     border: 2px dashed #eeeeee;
     border-radius: 10px;
     background-color: #fafafa;
     color: #bdbdbd;
     outline: none;
     transition: border .24s ease-in-out;
+    position: relative;
+}
+.cloudIcon {
+    position: absolute;
+    font-size: 2em;
+    color: gray;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+i.fa-cloud{
+    font-size: 3em;
+}
+.arrowUp{
+    position: absolute;
+    font-size: 30px;
+    color: black;
+    top: 30px;
+    left: 40px;
+    transform: translate(-50%, -50%);
+    animation: movement 1s infinite ease;
+}
+@keyframes movement {
+    0%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+.dragText{
+    font-size: 18px;
+    padding-bottom: 20px;
 }
 .isActive {
     border-color: #2196f3;

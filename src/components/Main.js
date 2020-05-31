@@ -9,13 +9,12 @@ class Main extends Component {
 
     };
     render() {
-        console.log(this.props);
         return (
             <div className="main-container">
                 <div className="side-nav">
                     <div className="user-avatar-wrapper">
                         <div className="user-avatar">
-                        <img src={""} alt="profile" />
+                        <img src={"/assets/dummy_image.png"} alt="profile" />
                         </div>
                     </div>
                     <ul className="navigation">

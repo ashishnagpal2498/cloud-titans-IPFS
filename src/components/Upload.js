@@ -6,6 +6,7 @@ class Upload extends Component {
     constructor() {
         super();
         this.onDrop = (files) => {
+            console.log(files);
             this.setState({files})
         };
         this.state = {
@@ -26,19 +27,24 @@ class Upload extends Component {
             <Dropzone onDrop={this.onDrop} multiple={false} noClick={true} noKeyboard={true}>
                 {({getRootProps, getInputProps,open,isDragActive,
                       isDragAccept,
-                      isDragReject }) => (
+                      isDragReject,
+                    }) => (
                     <section className="dropZone-outer">
+                        <h4>File Uploaded</h4>
+                        <ul>{files}</ul>
                         <button type="button" className={"upload-button"} onClick={open} >File upload</button>
                         <div className="option">OR</div>
-                        <div {...getRootProps({className: isDragActive ? "dropZone isActive": isDragReject ? "dropZone isReject" :
-                        isDragAccept ? "dropZone isAccept" : "dropZone"})}>
+                        <div {...getRootProps({className: isDragAccept ? "dropZone isAccept" : isDragReject ? "dropZone isReject" :
+                                isDragActive ? "dropZone isActive" : "dropZone"})}>
+                            {console.log(isDragAccept)}
                             <input {...getInputProps()} />
-                            <p>Drag 'n' drop some files here, or click to select files</p>
+                            <p className="dragText">Drag 'n' drop file here</p>
+                            <div className="cloudIcon">
+                                <i className="fa fa-cloud" />
+                                <i className="fa fa-arrow-up arrowUp" />
+                            </div>
                         </div>
-                        <aside>
-                            <h4>Files</h4>
-                            <ul>{files}</ul>
-                        </aside>
+                        <button className="upload-button">Upload</button>
                     </section>
                 )}
             </Dropzone>
