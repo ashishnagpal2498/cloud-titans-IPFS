@@ -6,25 +6,18 @@ passport.serializeUser(function(user, done) {
     done(null, user._id);
 });
 
-passport.deserializeUser(function(_id, done) {
-    User.find({_id}).toArray(function(err, user) {
-        done(err, user);
-    });
+passport.deserializeUser(async function(_id, done) {
+    let user = await User.findById(_id);
+    done(null, user);
 });
 
 passport.use(new LocalStrategy({
-    },
-    function(email, password, done) {
-        User.find({ email: email }, function(err, user) {
-            if (err) { return done(err); }
-            if (!user) {
-                return done(null, false, { message: 'Incorrect username.' });
-            }
-            if (!user.validPassword(password)) {
-                return done(null, false, { message: 'Incorrect password.' });
-            }
-            return done(null, user);
-        });
+    usernameField: 'email',
+    passwordField: 'password'
+    },async function(email, password, done) {
+        let userResult = await User.find(email,password);
+            console.log('userResult',userResult);
+            return done(userResult);
     }
 ));
 

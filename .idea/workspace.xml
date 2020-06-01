@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4b2b7711-6301-42e1-bd69-6fdcaf7ba002" name="Default Changelist" comment=":up: react router correction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/passport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590693384961</updated>
       <workItem from="1590693387927" duration="32039000" />
-      <workItem from="1590956309459" duration="9382000" />
+      <workItem from="1590956309459" duration="21825000" />
     </task>
     <task id="LOCAL-00001" summary=":up: react router correction">
       <created>1590944786814</created>
