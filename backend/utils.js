@@ -10,7 +10,7 @@ const messages = (type,data) => {
         case "s" : return data + " Successfully";
         case "f" : return data + " Error";
     }
-}
+};
 
 exports = module.exports = {
     objectGenerator,messages

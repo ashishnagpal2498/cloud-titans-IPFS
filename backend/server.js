@@ -6,11 +6,6 @@ const expressSession = require('express-session')
 const passport = require('./passport').passport;
 const mongoDB = require('./model');
 mongoDB.connectToServer((err) => { if(err) console.error('Error',err)})
-const routes = {
-    signup: require('./api/signup').route,
-    login: require('./api/login').route
-};
-
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -19,9 +14,15 @@ app.use(expressSession({ secret: "cats" }));
 app.use(passport.initialize());
 app.use(passport.session());
 
+const routes = {
+    signup: require('./api/signup').route,
+    login: require('./api/login').route,
+    upload:  require('./api/upload').route
+};
+
 app.use('/login',routes.login);
 app.use('/signup',routes.signup);
-
+app.use('/upload',routes.upload);
 
 app.listen(2222,()=>{
     console.log('server has started at http://localhost:2222');

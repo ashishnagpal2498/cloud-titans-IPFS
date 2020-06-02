@@ -1,6 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### MongoDb local -
 mongo-files
+###Multer File uploads
+fileUploads/
 ### Node template
 # Logs
 logs

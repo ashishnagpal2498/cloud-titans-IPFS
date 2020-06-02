@@ -43,9 +43,11 @@ module.exports = {
           },
             findById : async (userId) => {
                 let user = _db.collection('users');
-                return await user.find({_id: mongodb.ObjectID(userId)}).toArray((err,res)=>{
-                  if(err) return err;
-                  return res;
+                return new Promise((resolve,reject) => {
+                    user.find({_id: mongodb.ObjectId(userId)}).toArray((err,res)=>{
+                        if(err) reject(err);
+                        resolve(res);
+                })
               })
             },
         Password: {
