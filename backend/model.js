@@ -36,7 +36,7 @@ module.exports = {
                   }).toArray(async (err,result) => {
                       console.log(result[0]);
                       if(err)  reject(err);
-                      resolve(this.Password.find(result[0]._id,passInput));
+                      resolve(this.Password.find(result[0],passInput));
                   });
               })
 
@@ -62,7 +62,8 @@ module.exports = {
                         .catch((err) => reject(objectGenerator(true,err,messages("f","Server"))));
                 })
             },
-            find: async (userId,passInput) => {
+            find: async (user,passInput) => {
+                let userId = user._id;
                 let password = _db.collection('password')
                      return new Promise((resolve,reject) => {
                          password.find({
@@ -73,7 +74,7 @@ module.exports = {
                              bcrypyt.compare(passInput, result[0].password)
                                  .then((result1) => {
                                      if (result1 === true)
-                                         resolve(objectGenerator(null, result[0], messages("s", "Found")));
+                                         resolve(objectGenerator(null, user, messages("s", "Found")));
                                      else reject(objectGenerator(null, [], "Invalid Email/Password"))
                                  })
                          })

@@ -30,6 +30,14 @@
     padding: 40px 30px;
     background-color: white;
 }
+.btn {
+    padding: 15px 30px;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
 .login-btn {
     margin: 20px auto;
     background-color: #66FF99;
@@ -41,7 +49,7 @@
 }
 .inputBox {
     width: 100%;
-    margin: 20px auto;
+    margin: 30px auto;
     position: relative;
 }
 .inputBox input{
@@ -83,4 +91,106 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 18px;
+}
+.input-error-message{
+    font-size: 13px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    color: #ff1744;
+}
+
+/* CUSTOM Select Option*/
+.filter-wrapper {
+    flex: 1 15%;
+    max-width: 15%;
+    padding: 0 10px;
+}
+.fx-b30{
+    flex: 1 30%;
+    max-width: 30%;
+}
+.filter-wrapper > label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.filter {
+    position: relative;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.filter-value-wrapper{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    cursor: pointer;
+}
+.filter-value{
+    padding-left: 10px;
+    pointer-events: none;
+    text-transform: capitalize;
+}
+.filter-icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    pointer-events: none;
+}
+.filter-icon i{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.optionList {
+    height: 0;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    opacity: 0;
+    z-index: 5;
+    background-color: #fff;
+    visibility: hidden;
+    overflow-y: scroll;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.4s ease-in-out;
+}
+.optionList::-webkit-scrollbar {
+    width: 10px;
+}
+.optionList::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+.optionList::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 100px;
+}
+.optionList li {
+    padding: 10px 20px;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    text-transform: capitalize;
+}
+.optionList li:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+.displayList{
+    height: 150px;
+    opacity: 1;
+    visibility: visible;
+}
+.filter option{
+    padding: 10px;
+    font-size: 15px;
 }

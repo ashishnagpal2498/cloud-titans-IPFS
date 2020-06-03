@@ -8,6 +8,13 @@ class Main extends Component {
     state = {
 
     };
+    componentWillMount() {
+
+    }
+    componentDidMount() {
+        console.log(this.props);
+    }
+
     render() {
         return (
             <div className="main-container">
@@ -19,16 +26,16 @@ class Main extends Component {
                     </div>
                     <ul className="navigation">
                         <li>
-                            <Link to={"/user/profile"}> Profile</Link>
+                            <Link to={`${this.props.match.url}/profile/`}> Profile</Link>
                         </li>
-                        <li><Link to={"/user/upload"}>Upload</Link></li>
-                        <li><Link to={"/user"}>View Files</Link></li>
+                        <li><Link to={`${this.props.match.url}/upload/`}>Upload</Link></li>
+                        <li><Link to={`/user/${this.props.match.params.id}`}>View Files</Link></li>
                     </ul>
                 </div>
                 <div className="main-content">
                         <Switch>
-                            <Route path={`${this.props.match.path}/profile`} component={Profile} />
-                            <Route path={`${this.props.match.path}/upload`} component={Upload} />
+                            <Route exact path={`${this.props.match.path}/profile`} component={Profile} />
+                            <Route exact path={`${this.props.match.path}/upload`} component={Upload} />
                             <Route path={"/"} component={Files} />
                         </Switch>
 

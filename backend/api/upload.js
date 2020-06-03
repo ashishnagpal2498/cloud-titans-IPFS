@@ -38,10 +38,10 @@ route.post('/',(req,res) => {
         const filePath = req.file.path;
         const fileHash = await addFile(fileName,filePath);
         console.log('FILE HASH ',fileHash)
-        // fs.unlink(filePath,(err)=>{
-        //     if(err) console.error('Error in unlinking file',err)
-        //     console.log('FIle deleted')
-        // })
+        fs.unlink(filePath,(err)=>{
+            if(err) console.error('Error in unlinking file',err)
+            console.log('FIle deleted')
+        })
         console.log(req.file);
        return res.status(200).send({
             message:"file uploaded successfully",
