@@ -85,12 +85,9 @@ module.exports = {
     Files: {
         add: async (fileObject) => {
             let files = _db.collection('files')
-            return await files.insertOne({
-                name: fileObject.name,
-                size: fileObject.size,
-                type:  fileObject.type,
-                userId: fileObject.userId,
-            }).then((result) => objectGenerator(null,result.insertedId,"Added"));
+            return await files.insertOne(fileObject)
+                .then((result) => objectGenerator(null,{id:result.insertedId},"Added"))
+                .catch((err) => objectGenerator(true,err,"Error in adding file"))
         },
         findById: async (id) => {
             let files =  _db.collection('files')
