@@ -1,8 +1,16 @@
 import React, {Component} from 'react';
 import '../css/files.css'
+import axios from 'axios'
 class Files extends Component {
+
+    componentDidMount() {
+        axios.get(`http:localhost:2222/files/${this.props.id}`,(data) => {
+            console.log('data');
+        })
+    }
+
     render() {
-        // Search - and sort -
+        // Search - and sort -1
         return (
             <div className="files-container">
                 <h1 className="files-heading">Files</h1>

@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
+    padding: 20px 50px;
     border: 2px dashed #eeeeee;
     border-radius: 10px;
     background-color: #fafafa;
@@ -40,13 +40,43 @@
     transition: border .24s ease-in-out;
     position: relative;
 }
+.fileUploadBtn {
+    background-color: #2196f3;
+    padding: 10px 15px;
+}
+.uploading {
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+}
+
+.uploading.dropZone {
+    flex-direction: row;
+    justify-content: center;
+}
+.dots {
+    display: inline-flex;
+    flex-basis: 5px;
+    align-self: center;
+    background-color: black;
+    height: 5px;
+    width: 5px;
+    margin: 0 10px;
+    margin-top: 10px;
+    animation: load infinite 1s normal;
+}
+@keyframes load {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .cloudIcon {
-    position: absolute;
+    position: relative;
     font-size: 2em;
     color: gray;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 i.fa-cloud{
     font-size: 3em;
@@ -83,4 +113,51 @@ i.fa-cloud{
 }
 isReject {
     border-color: #ff1744;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.2);
+}
+.modal-content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0  4px rgba(0,0,0,2);
+}
+.modal-close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    color: grey;
+}
+.modal-body {
+    text-align: center;
+}
+.modal-icon{
+    font-size: 22px;
+    border-radius: 100px;
+    margin: 10px 0;
+}
+.modal-text{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.success {
+    color: #00e676;
+    border: 1px dot-dash #00e676;
+}
+.failure {
+    color: #ff1744;
+    border: 1px dot-dash #ff1744;
 }

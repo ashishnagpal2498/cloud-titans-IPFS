@@ -1,25 +1,57 @@
 import React, {Component} from 'react';
 import Dropzone from 'react-dropzone';
 import '../css/upload.css'
-
+import axios from 'axios'
+import Modal from "./Modal";
 class Upload extends Component {
     constructor() {
         super();
         this.onDrop = (files) => {
-            console.log(files);
-            this.setState({files})
+            this.setState({file: files[0],fileError: false})
         };
         this.state = {
-            files: []
+            file: {},
+            fileError: false,
+            upload: false,
+            modalType: "",
+            modal: false
         };
     }
-
+    uploadFile = () => {
+        console.log('this.props.match',this.props.match.params.id);
+        if(!(Object.keys(this.state.file).length)){
+            this.setState({
+                fileError: true
+            })
+            return;
+        }
+        this.setState({upload: true})
+        const formData = new FormData();
+        formData.append('file-value',this.state.file,this.state.file.name)
+        axios.post(`http://localhost:2222/upload/${this.props.match.params.id}`,formData,{
+            contentType: "multipart/form-data"
+        }).then((data)=>{
+            console.log('Data',data);
+            if(data.error) {
+            }
+            else{
+                this.setState({
+                    modal: true,
+                    modalType: "success",
+                    file: {},
+                    upload: false
+                })
+            }
+        })
+    };
+    closeModal = () => {
+      this.setState({modal:false,modalType:""})
+    };
     render() {
-        const files = this.state.files.map(file => (
-            <li key={file.name}>
-                {file.name} - {file.size} bytes
+        const files =
+            <li key={this.state.file.name}>
+                {this.state.file.name} - {this.state.file.size} bytes
             </li>
-        ));
 
         return (
             <div className="upload-container">
@@ -30,24 +62,36 @@ class Upload extends Component {
                       isDragReject,
                     }) => (
                     <section className="dropZone-outer">
-                        <h4>File Uploaded</h4>
-                        <ul>{files}</ul>
-                        <button type="button" className={"upload-button"} onClick={open} >File upload</button>
-                        <div className="option">OR</div>
+                        {this.state.upload ?
+                            <div className="uploading dropZone">
+                                <span>Uploading </span>
+                                <span className="dots"/>
+                                <span className="dots"/>
+                                <span className="dots"/>
+                                <span className="dots"/>
+                            </div> :
+                            <React.Fragment>
                         <div {...getRootProps({className: isDragAccept ? "dropZone isAccept" : isDragReject ? "dropZone isReject" :
                                 isDragActive ? "dropZone isActive" : "dropZone"})}>
-                            {console.log(isDragAccept)}
                             <input {...getInputProps()} />
+                            <button type="button" className="btn fileUploadBtn" onClick={open} >File upload</button>
+                            <div className="option">OR</div>
                             <p className="dragText">Drag 'n' drop file here</p>
                             <div className="cloudIcon">
                                 <i className="fa fa-cloud" />
                                 <i className="fa fa-arrow-up arrowUp" />
                             </div>
                         </div>
-                        <button className="upload-button">Upload</button>
+                                <h4>File Uploaded</h4>
+                                <ul>{files}</ul>
+                        <button className="upload-button" onClick={this.uploadFile}>Upload</button>
+                            </React.Fragment>
+                        }
                     </section>
                 )}
             </Dropzone>
+                {this.state.modal &&
+                <Modal closeModal={this.closeModal} type ={this.state.modalType} />}
             </div>
         );
     }
