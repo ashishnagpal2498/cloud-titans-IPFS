@@ -1,9 +1,4 @@
 .main-container{
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
 }
 .side-nav{
@@ -43,4 +38,44 @@
 }
 .main-content{
     flex: 1 1 85%;
+}
+.nav-menu {
+    padding: 15px;
+    background-color: #66FF99;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.nav-menu i {
+    flex-basis: 10%;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+}
+.side-nav.toggle-menu {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+@media screen and (max-width: 576px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .side-nav {
+        flex-basis: 100%;
+        max-width: 100%;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        height: 0;
+        width: 100%;
+        transition: height 0.4s;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 5;
+    }
+    .main-content {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
 }
