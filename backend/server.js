@@ -17,12 +17,21 @@ app.use(passport.session());
 const routes = {
     signup: require('./api/signup').route,
     login: require('./api/login').route,
-    upload:  require('./api/upload').route
+    upload:  require('./api/upload').route,
+    file: require('./api/files').route
 };
 
 app.use('/login',routes.login);
 app.use('/signup',routes.signup);
 app.use('/upload',routes.upload);
+app.use('/file',routes.file);
+
+app.use((req,res)=> {
+    res.status(404).send({
+        error:true,
+        message:"Path not found"
+    })
+})
 
 app.listen(2222,()=>{
     console.log('server has started at http://localhost:2222');

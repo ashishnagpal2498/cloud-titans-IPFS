@@ -82,5 +82,25 @@ module.exports = {
             }
         }
     },
+    Files: {
+        add: async (fileObject) => {
+            let files = _db.collection('files')
+            return await files.insertOne({
+                name: fileObject.name,
+                size: fileObject.size,
+                type:  fileObject.type,
+                userId: fileObject.userId,
+            }).then((result) => objectGenerator(null,result.insertedId,"Added"));
+        },
+        findById: async (id) => {
+            let files =  _db.collection('files')
+            return new Promise((resolve,reject) => {
+                files.find({_id: mongodb.ObjectId(id)}).toArray((err,res)=>{
+                    if(err) reject(objectGenerator(true,err,"Error in finding file"));
+                    resolve(objectGenerator(null,res,"File found successfully"))
+                })
+            })
+        }
+    }
 
 };
