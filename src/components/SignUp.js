@@ -10,6 +10,8 @@ class SignUp extends Component {
             securityAnswer: "",
             phoneNumber: "",
             imageUrl: "",
+            name: "",
+            place: "",
         },
         viewPassword: false,
         reTypePassword: "",
@@ -153,6 +155,16 @@ class SignUp extends Component {
                         {this.state.passwordReTypeError &&  <span className="input-error-message"><i className="fa fa-exclamation-triangle"/> {this.state.passwordReTypeError}</span> }
                         <input type="password" name="reTypePassword" id="reTypePassword" placeholder=" " onChange={this.onChangeHandler}/>
                         <label className="placeholder-label" htmlFor="reTypePassword">Re-Type Password</label>
+                    </div>
+                    <div className="form-input">
+                        <div className="inputBox">
+                            <input type="text" name="name" id="name" placeholder=" " onChange={this.onChangeHandler}/>
+                            <label className="placeholder-label" htmlFor="name">Name</label>
+                        </div>
+                        <div className="inputBox">
+                            <input type="text" name="place" id="place" placeholder=" " onChange={this.uploadFile}/>
+                            <label className="placeholder-label" htmlFor="fileUrl">Place</label>
+                        </div>
                     </div>
                     <div className="form-input">
                         <div className="inputBox">

@@ -61,6 +61,7 @@ route.post('/upload/:id',(req,res) => {
                 fileHash: fileHash,
                 userId: req.params.id,
             });
+            console.log(addFileToDB)
             if(addFileToDB.error) return res.status(500).send(addFileToDB);
             return res.status(200).send(addFileToDB)
         }

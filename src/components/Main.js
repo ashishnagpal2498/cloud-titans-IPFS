@@ -37,6 +37,7 @@ class Main extends Component {
                         <li onClick={this.state.toggleMenu && this.toggleMenu}><Link to={`${this.props.match.url}/upload/`}>Upload</Link></li>
                         <li onClick={this.state.toggleMenu && this.toggleMenu} ><Link to={`/user/${this.props.match.params.id}`}>View Files</Link></li>
                     </ul>
+                    <Link to={"/login"} className ="logout-button">Logout</Link>
                 </div>
                 <div className="nav-menu" onClick={this.toggleMenu}>
                     <i className="fa fa-bars" />

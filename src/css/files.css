@@ -38,3 +38,14 @@
     text-align: center;
     perspective: 100px;
 }
+.card-detail h5{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width: 576px) {
+    .card{
+        flex: 1 40%;
+        max-width: 40%;
+    }
+}

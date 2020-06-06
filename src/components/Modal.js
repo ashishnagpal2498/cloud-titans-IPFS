@@ -20,10 +20,17 @@ const Modal = ({content,type,closeModal}) => {
                             </div>
                         </React.Fragment>
                         :
-                        <div className="">
-                            File
+                        <div className="viewFile">
+                            <div>
+                                <h5>File Name: - </h5>
+                                <span> {content.name}</span>
+                            </div>
+                            <div>
+
                             Link :
-                            <a href={`http://localhost:8080/ipfs/`+content.fileHash} target={"_blank"} >View File</a>
+                                <a href={`http://localhost:8080/ipfs/`+content.fileHash} target={"_blank"} >View File</a>
+                            </div>
+
                         </div>
                     }
                 </div>

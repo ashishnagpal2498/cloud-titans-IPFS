@@ -164,6 +164,16 @@ isReject {
     font-size: 2em;
     text-transform: capitalize;
 }
+.viewFile {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.viewFile > * {
+    flex-basis: 100%;
+    font-size: 18px;
+    margin: 10px 0;
+}
 .success {
     color: #00e676;
     border: 1px dot-dash #00e676;

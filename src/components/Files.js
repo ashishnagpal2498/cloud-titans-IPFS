@@ -35,7 +35,7 @@ class Files extends Component {
     }
     render() {
         // Search - and sort -1
-        const fileTypes = ["image","text","video"]
+        const fileTypes = ["image","text","video","document"]
         const fileImage = (fileType) => {
            let fType = fileTypes.find((item) => fileType.toLowerCase().includes(item));
            console.log(fType)
