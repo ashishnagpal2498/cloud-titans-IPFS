@@ -19,6 +19,10 @@
     flex: 1 1 35%;
     position: relative;
 }
+.login-heading{
+    text-align: center;
+    margin: 20px 0;
+}
 .form-container {
     box-shadow: 0 0 6px rgba(0,0,0,0.3);
     position: absolute;
@@ -51,6 +55,7 @@
     width: 100%;
     margin: 30px auto;
     position: relative;
+    box-sizing: border-box;
 }
 .inputBox input{
     border: none;
@@ -99,12 +104,18 @@
     right: 0;
     color: #ff1744;
 }
+.form-input .inputBox{
+    width: 50%;
+    padding: 0 20px;
+    display: inline-block;
+}
 
 /* CUSTOM Select Option*/
 .filter-wrapper {
-    flex: 1 15%;
-    max-width: 15%;
+    flex: 1 80%;
+    max-width: 80%;
     padding: 0 10px;
+    position: relative;
 }
 .fx-b30{
     flex: 1 30%;
@@ -193,4 +204,8 @@
 .filter option{
     padding: 10px;
     font-size: 15px;
+}
+
+.signup-container .form-container {
+   margin: 1em 0;
 }

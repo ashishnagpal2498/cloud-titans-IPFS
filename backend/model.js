@@ -98,10 +98,10 @@ module.exports = {
                 })
             })
         },
-        fileExist: (fileHash) => {
+        fileExist: (fileHash,userId) => {
             let files = _db.collection('files')
             return new Promise((resolve,reject) => {
-                files.find({fileHash:fileHash}).toArray((err,result) => {
+                files.find({fileHash:fileHash,userId:userId}).toArray((err,result) => {
                     console.log('File Exist Hash ---- File ',fileHash,result[0])
                     if(err) reject(objectGenerator(true,err,"Error in finding file from Hash"))
                     else if(result.length<1) resolve(objectGenerator(null,null,"Empty"));

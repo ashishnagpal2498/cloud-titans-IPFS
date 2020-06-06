@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../css/login.css'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 class Login extends Component {
     state = {
         payload: {
@@ -62,7 +63,7 @@ class Login extends Component {
                 <div className="page-division">
                 <div className="background-container"/>
                 <div className="details-container">
-                    <h2>Welcome To IPFS-React</h2>
+                    <h2 className="login-heading">Welcome To IPFS-React</h2>
                     <form className="form-container" method={"POST"}>
                         <div className="error-message">Invalid Email or Password</div>
                     <div className="inputBox">
@@ -74,7 +75,7 @@ class Login extends Component {
                         <input name="password" type={this.state.viewPassword ? "text" :"password"} id="password" placeholder=" " onChange={this.onChangeHandler} />
                         <label className="placeholder-label" htmlFor="password">Password</label>
                         <div className="inputBoxIcon">
-                            <i className={this.state.viewPassword ? "fa fa-eye": "fa fa-facebook-f"} onClick={() => this.setState((prevState) => {
+                            <i className={this.state.viewPassword ? "fa fa-eye-slash": "fa fa-eye"} onClick={() => this.setState((prevState) => {
                                 return {
                                     viewPassword: !prevState.viewPassword
                                 }
@@ -82,6 +83,7 @@ class Login extends Component {
                         </div>
                         {this.state.passwordError &&  <span className="input-error-message"><i className="fa fa-exclamation"/> {this.state.passwordError}</span> }
                     </div>
+                        <Link to={"/signup"}>New User ? SignUp.</Link>
                     <button type="button" className="btn login-btn" onClick={this.submitForm}>Login</button>
                 </form>
                     </div>

@@ -4,12 +4,11 @@
     <list default="true" id="4b2b7711-6301-42e1-bd69-6fdcaf7ba002" name="Default Changelist" comment=":up: file route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/api/files.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/files.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Files.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Files.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/files.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/files.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/login.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +79,7 @@
       <updated>1590693384961</updated>
       <workItem from="1590693387927" duration="32039000" />
       <workItem from="1590956309459" duration="45396000" />
-      <workItem from="1591196241667" duration="42207000" />
+      <workItem from="1591196241667" duration="50367000" />
     </task>
     <task id="LOCAL-00001" summary=":up: react router correction">
       <created>1590944786814</created>

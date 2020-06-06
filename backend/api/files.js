@@ -50,7 +50,7 @@ route.post('/upload/:id',(req,res) => {
             console.log('FIle deleted')
         })
         console.log(req.file);
-        const fileAlreadyExist = await Files.fileExist(fileHash);
+        const fileAlreadyExist = await Files.fileExist(fileHash,req.params.id);
         console.log('FIle already existt ---',fileAlreadyExist)
         if((fileAlreadyExist.result === null ))
         {

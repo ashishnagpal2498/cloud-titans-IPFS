@@ -6,6 +6,8 @@ route.post('/',async (req,res)=>{
     const user = await User.add({
         email: req.body.email,
         number: req.body.number,
+        securityQuestion: req.body.securityQuestion,
+        securityAnswer: req.body.securityAnswer,
         filesStored: 0,
     },req.body.password);
     if(user.err) return res.status(500).send(user);
