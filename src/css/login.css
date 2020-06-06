@@ -205,6 +205,10 @@
     font-size: 15px;
 }
 
-.signup-container .form-container {
-   margin: 1em 0;
+.signup-container > .form-container {
+   position: relative;
+    transform: none;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
 }

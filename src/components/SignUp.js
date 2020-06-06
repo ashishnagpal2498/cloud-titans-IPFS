@@ -162,7 +162,7 @@ class SignUp extends Component {
                             <label className="placeholder-label" htmlFor="name">Name</label>
                         </div>
                         <div className="inputBox">
-                            <input type="text" name="place" id="place" placeholder=" " onChange={this.uploadFile}/>
+                            <input type="text" name="place" id="place" placeholder=" " onChange={this.onChangeHandler}/>
                             <label className="placeholder-label" htmlFor="fileUrl">Place</label>
                         </div>
                     </div>
