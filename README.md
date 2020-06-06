@@ -2,6 +2,9 @@
 The project IPFS-React is a file upload system in which user have to login and that's it, you are ready to upload files.
 Project features the concept of interplanetary system which divides the file into blocks using Merkle-DAG (tree like structure) structure where each node is the called the block, storing hash at each node, combines to form an actual file.  
 IPFS searches the file on the basis of content, therefore when same file is uploaded multiple times same hash is returned, thus reducing the redundancy of storage.  
+  
+Using the concept of IPFS this project aims to upload file on IPFS and retrieve back the hash of files.  
+And so, viewing the files on IPFS localhost for now.
 
 The technology used to build this project are: -
 1. Frontend
