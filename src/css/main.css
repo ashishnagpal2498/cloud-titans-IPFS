@@ -40,11 +40,12 @@
     flex: 1 1 85%;
 }
 .nav-menu {
+    flex-basis: 100%;
     padding: 15px;
     background-color: #66FF99;
-    display: flex;
     justify-content: end;
     align-items: center;
+    display: none;
 }
 .nav-menu i {
     flex-basis: 10%;
@@ -77,5 +78,8 @@
     .main-content {
         flex-basis: 100%;
         max-width: 100%;
+    }
+    .nav-menu {
+        display: flex;
     }
 }

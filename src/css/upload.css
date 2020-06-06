@@ -4,6 +4,14 @@
 .heading {
     font-size: 25px;
 }
+.error-div {
+    position: relative;
+    margin: 15px 0;
+    font-size: 14px;
+}
+.error-div > .error-message {
+    display: block;
+}
 .dropZone-outer {
     width: 80%;
     margin: 30px auto;
@@ -132,6 +140,8 @@ isReject {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0  4px rgba(0,0,0,2);
+    min-height: 200px;
+    min-width: 30%;
 }
 .modal-close-icon {
     position: absolute;
@@ -140,17 +150,18 @@ isReject {
     padding: 10px;
     cursor: pointer;
     color: grey;
+    font-size: 1.7em;
 }
 .modal-body {
     text-align: center;
 }
 .modal-icon{
-    font-size: 22px;
     border-radius: 100px;
     margin: 10px 0;
+    font-size: 3em;
 }
 .modal-text{
-    font-size: 18px;
+    font-size: 2em;
     text-transform: capitalize;
 }
 .success {
@@ -160,4 +171,7 @@ isReject {
 .failure {
     color: #ff1744;
     border: 1px dot-dash #ff1744;
+}
+.display-file-div {
+    margin: 10px 0;
 }

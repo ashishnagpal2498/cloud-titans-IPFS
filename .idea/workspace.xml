@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b2b7711-6301-42e1-bd69-6fdcaf7ba002" name="Default Changelist" comment=":up: react router correction">
+    <list default="true" id="4b2b7711-6301-42e1-bd69-6fdcaf7ba002" name="Default Changelist" comment=":up: file route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/files.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/files.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/api/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/upload.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/passport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/upload.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/upload.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +84,7 @@
       <updated>1590693384961</updated>
       <workItem from="1590693387927" duration="32039000" />
       <workItem from="1590956309459" duration="45396000" />
-      <workItem from="1591196241667" duration="9852000" />
+      <workItem from="1591196241667" duration="36791000" />
     </task>
     <task id="LOCAL-00001" summary=":up: react router correction">
       <created>1590944786814</created>
@@ -99,7 +100,35 @@
       <option name="project" value="LOCAL" />
       <updated>1590944866280</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=":up: file route">
+      <created>1591354449817</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591354449817</updated>
+    </task>
+    <task id="LOCAL-00004" summary=":star: responsive">
+      <created>1591380656784</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591380656784</updated>
+    </task>
+    <task id="LOCAL-00005" summary=":up: upload a file">
+      <created>1591380691810</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591380691810</updated>
+    </task>
+    <task id="LOCAL-00006" summary=":up: file upload backend">
+      <created>1591380722837</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591380722837</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,17 +150,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":up: react router correction" />
     <MESSAGE value=":up: profile and files component" />
-    <option name="LAST_COMMIT_MESSAGE" value=":up: profile and files component" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/backend/api/upload.js</url>
-          <line>9</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value=":up: file route" />
+    <MESSAGE value=":star: responsive" />
+    <MESSAGE value=":up: upload a file" />
+    <MESSAGE value=":up: file upload backend" />
+    <option name="LAST_COMMIT_MESSAGE" value=":up: file upload backend" />
   </component>
 </project>

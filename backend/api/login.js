@@ -15,18 +15,11 @@ route.get('/',(req,res)=>{
 })
 
 route.post('/', function(req, res, next) {
-    passport.authenticate('local', function(result) {
+    passport.authenticate('local', {session: false}, function(result) {
         console.log("login -- ",result);
         if (Array.isArray(result.result) && !result.result.length) { return res.status(401).send(result) }
-        if (result.error) { return res.status(500).send(result) }
-        req.logIn(result.result, function(err) {
-            if (err) { return res.status(500).send({
-                error: err,
-                result:[],
-                message: "Server Error"
-            }) }
-            return res.status(200).send(result);
-        });
+        else if (result.error) { return res.status(500).send(result) }
+        else return res.status(200).send(result);
     })(req, res, next);
 });
 
