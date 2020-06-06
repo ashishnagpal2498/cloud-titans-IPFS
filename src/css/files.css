@@ -16,6 +16,7 @@
     flex: 1 1 25%;
     max-width: 25%;
     padding: 10px 15px;
+    cursor: pointer;
 }
 .card-image-outer{
     min-height: 100px;

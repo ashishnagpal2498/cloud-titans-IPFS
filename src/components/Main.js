@@ -45,7 +45,7 @@ class Main extends Component {
                         <Switch>
                             <Route exact path={`${this.props.match.path}/profile`} component={Profile} />
                             <Route exact path={`${this.props.match.path}/upload`} component={Upload} />
-                            <Route path={"/"} id={this.props.match.params.id} component={Files} />
+                            <Route path={"/"} id={this.props.match.params.id} render={() => <Files {...this.props} />} />
                         </Switch>
                 </div>
             </div>

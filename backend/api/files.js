@@ -52,8 +52,8 @@ route.post('/upload/:id',(req,res) => {
         console.log(req.file);
         const fileAlreadyExist = await Files.fileExist(fileHash);
         console.log('FIle already existt ---',fileAlreadyExist)
-        if((fileAlreadyExist.result._id === undefined))
-        {   console.log('FileAlreadyExist ID',fileAlreadyExist.result._id)
+        if((fileAlreadyExist.result === null ))
+        {
             const addFileToDB = await Files.add({
                 name: fileUploaded.originalname,
                 size: fileUploaded.size,
@@ -71,8 +71,10 @@ route.post('/upload/:id',(req,res) => {
     })
     console.log('File')
 });
-route.get('/user/:id',(req,res)=>{
-
+route.get('/user/:id',async (req,res)=>{
+    const files = await Files.fileUser(req.params.id)
+    if(files.error) return res.status(500).send(files);
+    return res.status(200).send(files);
 })
 
 exports = module.exports = {route};

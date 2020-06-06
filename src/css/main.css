@@ -4,6 +4,7 @@
 .side-nav{
     flex: 1 1 15%;
     background-color: #66FF99;
+    height: 100vh;
 }
 .user-avatar-wrapper {
     min-height: 100px;

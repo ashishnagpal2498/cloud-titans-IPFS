@@ -114,8 +114,8 @@ module.exports = {
             return new Promise((resolve,reject) => {
                 files.find({userId:userId}).toArray((err,result) => {
                     console.log('File by userID',result)
-                    if(err) reject(objectGenerator(true,err,"Error in finding file from Hash"))
-                    else resolve(objectGenerator(null,result,"File already exist"))
+                    if(err) reject(objectGenerator(true,err,"Error in finding files"))
+                    else resolve(objectGenerator(null,result,"Files"))
                 })
             })
         }
