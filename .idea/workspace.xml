@@ -4,6 +4,9 @@
     <list default="true" id="4b2b7711-6301-42e1-bd69-6fdcaf7ba002" name="Default Changelist" comment=":up: file route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/login.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +34,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/md-images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects2020\cloud-titans_ipfs\md-images" />
       <recent name="D:\WebstormProjects2020\cloud-titans_ipfs\public\assets" />
     </key>
   </component>
@@ -74,7 +78,7 @@
       <updated>1590693384961</updated>
       <workItem from="1590693387927" duration="32039000" />
       <workItem from="1590956309459" duration="45396000" />
-      <workItem from="1591196241667" duration="57765000" />
+      <workItem from="1591196241667" duration="60365000" />
     </task>
     <task id="LOCAL-00001" summary=":up: react router correction">
       <created>1590944786814</created>

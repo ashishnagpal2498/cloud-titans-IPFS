@@ -10,7 +10,8 @@ class Login extends Component {
         },
         emailError: "",
         passwordError: "",
-        viewPassword: false
+        viewPassword: false,
+        errorMessage: false
     };
     componentWillMount() {
         axios.get('http://localhost:2222/login').then((result)=>{
@@ -33,7 +34,7 @@ class Login extends Component {
             passwordError = "Password should match the criteria"
         }
         this.setState({
-            payload,emailError,passwordError
+            payload,emailError,passwordError,errorMessage: false
         })
     };
     submitForm = (e) => {
@@ -55,7 +56,10 @@ class Login extends Component {
           let userId = user.data.result._id;
           console.log(userId)
           this.props.history.push(`/user/${userId}`,{userId});
-      }).catch((err) => console.error('err',err));
+      }).catch((err) => {
+          console.error('err',err)
+          this.setState({errorMessage:true})
+      });
     };
     render() {
         return (
@@ -65,7 +69,7 @@ class Login extends Component {
                 <div className="details-container">
                     <h2 className="login-heading">Welcome To IPFS-React</h2>
                     <form className="form-container" method={"POST"}>
-                        <div className="error-message">Invalid Email or Password</div>
+                        {this.state.errorMessage && <div className="error-message">Invalid Email or Password</div>}
                     <div className="inputBox">
                         <input type="email" name="email" id="email" placeholder=" " onChange={this.onChangeHandler}/>
                         <label className="placeholder-label" htmlFor="email">Email</label>

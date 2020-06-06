@@ -36,7 +36,8 @@ module.exports = {
                   }).toArray(async (err,result) => {
                       console.log(result[0]);
                       if(err)  reject(err);
-                      resolve(this.Password.find(result[0],passInput));
+                      const val = await this.Password.find(result[0],passInput).then((res) => res);
+                      resolve(val);
                   });
               })
 
@@ -75,7 +76,7 @@ module.exports = {
                                  .then((result1) => {
                                      if (result1 === true)
                                          resolve(objectGenerator(null, user, messages("s", "Found")));
-                                     else reject(objectGenerator(null, [], "Invalid Email/Password"))
+                                     else resolve(objectGenerator(null, [], "Invalid Email/Password"))
                                  })
                          })
                      })
